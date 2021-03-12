@@ -27,4 +27,10 @@ public class UserController {
         }
 
     }
+
+    @RequestMapping("/logOut")
+    public String logOut(HttpServletRequest req){
+        req.getSession().removeAttribute("user");
+        return "/login.html";
+    }
 }

@@ -3,6 +3,7 @@ package com.derellea;
 import com.derellea.domain.User;
 import com.derellea.mapper.UserMapper;
 import com.derellea.service.CategoryService;
+import com.derellea.service.MessageService;
 import com.derellea.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,6 +18,8 @@ public class MyBatisTest {
     UserService userService;
     @Autowired
     CategoryService categoryService;
+    @Autowired
+    MessageService messageService;
     @Test
     public void userTest(){
         System.out.println(userService.findAll());
@@ -33,6 +36,11 @@ public class MyBatisTest {
     @Test
     public void categoryTest(){
         System.out.println(categoryService.findAll());
+    }
+
+    @Test
+    public void messageTest(){
+        System.out.println(messageService.countNoreadByAcceptId(1));
     }
 
 }
