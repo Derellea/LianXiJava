@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="sidebar_blog_1">
+    <!--                  <div class="sidebar-header">-->
+    <!--                     <div class="logo_section">-->
+    <!--                        <a href="index.html"><img class="logo_icon img-responsive" src="images/logo/logo_icon.png" alt="#" /></a>-->
+    <!--                     </div>-->
+    <!--                  </div>-->
+    <div class="sidebar_user_info">
+        <div class="icon_setting"></div>
+        <div class="user_profle_side">
+            <div class="user_img"><img class="img-responsive" src="images/layout_img/user_img.jpg" alt="#" /></div>
+            <div class="user_info">
+                <h6>John David</h6>
+                <p><span class="online_animation"></span> Online</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sidebar_blog_2">
+    <h4 id="lianjava_59">练JAVA，恋JAVA</h4>
+    <ul class="list-unstyled components" id="list">
+<!--        <li><a href="index.html"aria-expanded="false" ><i class="fa fa-clock-o yellow_color"></i> <span>学习统计</span></a></li>-->
+<!--        <li><a href="review.html"aria-expanded="false" ><i class="fa fa-book red_color"></i> <span>温故知心</span></a></li>-->
+<!--        <li>-->
+<!--            <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>视频学习</span></a>-->
+<!--            <ul class="collapse list-unstyled" id="element">-->
+<!--                <li><a href="javase.html">> <span>JavaEE</span></a></li>-->
+<!--                <li><a href="javascript.html">> <span>JavaScript</span></a></li>-->
+<!--                <li><a href="html.html">> <span>HTML</span></a></li>-->
+<!--                <li><a href="css.html">> <span>CSS</span></a></li>-->
+<!--                <li><a href="database.html">> <span>数据库基础原理</span></a></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!--        <li><a href="question.html"><i class="fa fa-briefcase blue1_color"></i> <span>疑难诊断</span></a></li>-->
+<!--        <li><a href="community.html"><i class="fa fa-comment red_color"></i> <span>开源社区</span></a></li>-->
+<!--        <li><a href="resource.html"><i class="fa fa-paper-plane orange_color"></i> <span>资源大本营</span></a></li>-->
+<!--        <li><a href="officialweb.html"><i class="fa fa-map purple_color2"></i> <span>官网直通</span></a></li>-->
+<!--        <li><a href="progress.html"><i class="fa fa-bar-chart-o green_color"></i> <span>进度可视化</span></a></li>-->
+<!--        <li><a href="settings.html"><i class="fa fa-cog yellow_color"></i> <span>设置</span></a></li>-->
+    </ul>
+</div>
+
+</body>
+<script src="/jQuery/jquery-2.2.3.min.js"/>
+<script></script>
+<script>
+    var vcStr='<ul class="collapse list-unstyled" id="element">';
+    $.post("/vediocategory",{},function (list) {
+            $(list).each(function (index,vc) {
+                vcStr+='<li><a href="/vedio/'+vc.vcId+'"> <span>'+vc.vcName+'</span></a></li>';
+
+            })
+        vcStr+="</ul></li>"
+    },"json")
+
+    $.post("/category/list",{},function (list){
+        var str='';
+        $(list).each(function (index,c){
+            if(c.cId=='3'){
+                str+='<li><a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>'+c.cName+'</span></a>'
+                str+=vcStr;
+            }else{
+                str+='<li><a href="'+c.cAdress+'"aria-expanded="false" ><i class="'+c.cClass+'"></i> <span>'+c.cName+'</span></a></li>'
+            }
+        })
+        $("#list").html(str);
+    },"json")
+</script>
+</html>

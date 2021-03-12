@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title></title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+      <link rel="icon" href="images/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- color css -->
+      <link rel="stylesheet" href="css/colors.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap-select.css" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="css/custom.css" />
+      <!-- calendar file css -->
+      <link rel="stylesheet" href="js/semantic.min.css" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body class="inner_page contact_page">
+      <div class="full_container">
+         <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+               <!-- topbar -->
+               <div class="topbar" id="topbar">
+
+               </div>
+               <!-- end topbar -->
+               <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2><a href="resource.html" class="btn fa fa-backward green_color" ></a> 安装JAVA SE平台</h2>
+                           </div>
+                        </div>
+                     </div>
+                     <h3 class="download_set">
+                     第一步：登陆官方网址http://www.oracle.com/technetwork/java/javase/downloads/index.html免费下载java se 提供的JDK,根据自己机器下载相应版本，本机器是64位所以下载对应的64位版本(JDK-8u102-windows-x64.exe)。
+
+                        <br>
+                        &nbsp;<br>
+                     第二步：双击下载后的文件图标出现安装向导界面，选择接受软件安装协议。可以使用安装向导界面选择的默认安装路径。
+
+                     C：\program Files\java\jdk1.8.0_102\
+
+                     也可以在安装界面上单击“更改”按钮将默认安装路径更改为用户希望的路径，
+
+                     如下图所示：<br>&nbsp;
+                        <img src="images/download/javase/1.png">
+                        <br>&nbsp;<br>
+                        需要注意的是，安装JDK过程中还额外提供一个java运行环境，（JRE），并且提示是否修改JRE默认的安装路径。
+
+                        C：\program Files\Iava\jre1.8.0_102
+
+                        建议采用默认安装路径，如果修改默认的安装路径，修改后的默认安装路径不可与JDK的安装路径相同，（JDK本身已经包含JRE)
+
+                        第三部：安装完成JDK后，会形成如下目录：<br>&nbsp;
+                        <img src="images/download/javase/2.png">
+                        <br>&nbsp;<br>
+                        第四步：环境变量的配置
+
+                        依次点击---------“我的电脑”，在弹出的菜单中选择-------“属性”，再单击---------“高级属性设置”，最后单击———“环境变量”
+
+                        在系统变量下添加环境变量————JAVA_HOME，让该环境变量值是JDK目录结构的根目录，如下图：<br>&nbsp;
+                        <img src="images/download/javase/3.png">
+                        <br>&nbsp;<br>
+                        系统环境Path设置：JDK平台提供的java编译器（javac.exe)和java解释器（java.exe)位根目录于的\bin文件夹中，为了可以在任何目录中使用编译器和解释器，应在系统中设置Path,接着在上一步中打开的环境变量选项卡的系统变量下面找到Path，单击编辑，弹出编辑系统变量对话框，在里面输入Path值即可，如下图：
+                        <br>&nbsp;
+                        <img src="images/download/javase/4.png">
+                        <br>&nbsp;<br>
+                        到此为止，JAVA se平台已被我们安装，小伙伴们可以用记事本编写自己的java 程序来大显身手了！
+
+                     </h3>
+
+                     <!-- row -->
+<!--                     <div class="row column1">-->
+<!--                        <div class="col-md-12">-->
+<!--                           <div class="white_shd full margin_bottom_10">-->
+<!--                              <div class="full graph_head  inbox-head">-->
+<!--                                 <form action="#" class="pull-left position search_inbox">-->
+<!--                                 <div class="input-append">-->
+<!--                                    <input type="text" class="sr-input" placeholder="Search Resource">-->
+<!--                                    <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>-->
+<!--                                 </div>-->
+<!--                                 </form>-->
+<!--                                 <ul class="unstyled inbox-pagination" >-->
+<!--                                    <li><span ><h5 class="h5_color">1-9 of 30</span></li>-->
+<!--                                    <li>-->
+<!--                                       <a class="np-btn" href="#"><i class="fa fa-angle-left  pagination-left"></i></a>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                       <a class="np-btn" href="#"><i class="fa fa-angle-right pagination-right"></i></a>-->
+<!--                                    </li>-->
+<!--                                 </ul>-->
+<!--                              </div>-->
+<!--&lt;!&ndash;                              <div class="inbox-head">&ndash;&gt;-->
+<!--&lt;!&ndash;                              <form action="#" class="pull-left position search_inbox">&ndash;&gt;-->
+<!--&lt;!&ndash;                                 <div class="input-append">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <input type="text" class="sr-input" placeholder="Search Resource">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>&ndash;&gt;-->
+<!--&lt;!&ndash;                                 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </form>&ndash;&gt;-->
+<!--&lt;!&ndash;                           </div>&ndash;&gt;-->
+<!--                              <div class="full price_table padding_infor_info">-->
+<!--                                 <div class="row">-->
+<!--                                    &lt;!&ndash; column contact &ndash;&gt; -->
+<!--                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_details margin_bottom_30">-->
+<!--                                       <div class="contact_blog">-->
+<!--&lt;!&ndash;                                          <h4 class="brief">Digital Strategist</h4>&ndash;&gt;-->
+<!--                                          <div class="contact_inner">-->
+<!--                                             <div class="left">-->
+<!--                                                <h3>Java SE 15</h3>-->
+<!--                                                <p><strong>About: </strong>the latest release for the Java SE Platform</p>-->
+<!--&lt;!&ndash;                                                <ul class="list-unstyled">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                   <li><i class="fa fa-envelope-o"></i> : test@gmail.com</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                   <li><i class="fa fa-phone"></i> : 987 654 3210</li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                </ul>&ndash;&gt;-->
+<!--                                             </div>-->
+<!--                                             <div class="right">-->
+<!--                                                <div class="profile_contacts">-->
+<!--                                                   <img class="img-responsive" src="images/layout_img/java.png" alt="#" />-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                             <div class="bottom_list">-->
+<!--&lt;!&ndash;                                                <div class="left_rating">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                   <p class="ratings">&ndash;&gt;-->
+<!--&lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                      <a href="#"><span class="fa fa-star-o"></span></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                   </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--                                                <div class="right_button">-->
+<!--                                                   <button type="button" class="btn btn-success btn-xs">-->
+<!--                                                      <i class="fa fa-search"></i> 安装教程-->
+<!--                                                   </button>-->
+<!--                                                   <a type="button" class="btn btn-primary btn-xs"-->
+<!--                                                      href="https://www.oracle.com/cn/java/technologies/javase-downloads.html#JDK15"-->
+<!--                                                      target="_blank">-->
+<!--                                                   <i class="fa fa-download"> </i> 下载-->
+<!--                                                   </a>-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                    &lt;!&ndash; end column contact blog &ndash;&gt;-->
+<!--                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_details margin_bottom_30">-->
+<!--                                       <div class="contact_blog">-->
+<!--                                          &lt;!&ndash;                                          <h4 class="brief">Digital Strategist</h4>&ndash;&gt;-->
+<!--                                          <div class="contact_inner">-->
+<!--                                             <div class="left">-->
+<!--                                                <h3>Java SE 8</h3>-->
+<!--                                                <p><strong>About: </strong>the most popular  Java SE Platform</p>-->
+<!--                                                &lt;!&ndash;                                                <ul class="list-unstyled">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-envelope-o"></i> : test@gmail.com</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-phone"></i> : 987 654 3210</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </ul>&ndash;&gt;-->
+<!--                                             </div>-->
+<!--                                             <div class="right">-->
+<!--                                                <div class="profile_contacts">-->
+<!--                                                   <img class="img-responsive" src="images/layout_img/java.png" alt="#" />-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                             <div class="bottom_list">-->
+<!--                                                &lt;!&ndash;                                                <div class="left_rating">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <p class="ratings">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star-o"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   </p>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--                                                <div class="right_button">-->
+<!--                                                   <button type="button" class="btn btn-success btn-xs">-->
+<!--                                                      <i class="fa fa-search"></i> 安装教程-->
+<!--                                                   </button>-->
+<!--                                                   <a type="button" class="btn btn-primary btn-xs"-->
+<!--                                                      href="https://www.oracle.com/cn/java/technologies/javase-downloads.html#JDK8"-->
+<!--                                                      target="_blank">-->
+<!--                                                      <i class="fa fa-download"> </i> 下载-->
+<!--                                                   </a>-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_details margin_bottom_30">-->
+<!--                                       <div class="contact_blog">-->
+<!--                                          &lt;!&ndash;                                          <h4 class="brief">Digital Strategist</h4>&ndash;&gt;-->
+<!--                                          <div class="contact_inner">-->
+<!--                                             <div class="left">-->
+<!--                                                <h3>MySQL 8.0.22</h3>-->
+<!--                                                <p><strong>About: </strong>a fully managed database service </p>-->
+<!--                                                &lt;!&ndash;                                                <ul class="list-unstyled">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-envelope-o"></i> : test@gmail.com</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-phone"></i> : 987 654 3210</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </ul>&ndash;&gt;-->
+<!--                                             </div>-->
+<!--                                             <div class="right">-->
+<!--                                                <div class="profile_contacts">-->
+<!--                                                   <img class="img-responsive" src="images/layout_img/mysql.png" alt="#" />-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                             <div class="bottom_list">-->
+<!--                                                &lt;!&ndash;                                                <div class="left_rating">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <p class="ratings">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star-o"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   </p>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--                                                <div class="right_button">-->
+<!--                                                   <button type="button" class="btn btn-success btn-xs">-->
+<!--                                                      <i class="fa fa-search"></i> 安装教程-->
+<!--                                                   </button>-->
+<!--                                                   <a type="button" class="btn btn-primary btn-xs"-->
+<!--                                                      href="https://dev.mysql.com/downloads/mysql/"-->
+<!--                                                      target="_blank">-->
+<!--                                                      <i class="fa fa-download"> </i> 下载-->
+<!--                                                   </a>-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_details margin_bottom_30">-->
+<!--                                       <div class="contact_blog">-->
+<!--                                          &lt;!&ndash;                                          <h4 class="brief">Digital Strategist</h4>&ndash;&gt;-->
+<!--                                          <div class="contact_inner">-->
+<!--                                             <div class="left">-->
+<!--                                                <h3>Oracle Database 19</h3>-->
+<!--                                                <p><strong>About: </strong>the latest long term release database</p>-->
+<!--                                                &lt;!&ndash;                                                <ul class="list-unstyled">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-envelope-o"></i> : test@gmail.com</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-phone"></i> : 987 654 3210</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </ul>&ndash;&gt;-->
+<!--                                             </div>-->
+<!--                                             <div class="right">-->
+<!--                                                <div class="profile_contacts">-->
+<!--                                                   <img class="img-responsive" src="images/layout_img/oracle.png" alt="#" />-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                             <div class="bottom_list">-->
+<!--                                                &lt;!&ndash;                                                <div class="left_rating">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <p class="ratings">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star-o"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   </p>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--                                                <div class="right_button">-->
+<!--                                                   <button type="button" class="btn btn-success btn-xs">-->
+<!--                                                      <i class="fa fa-search"></i> 安装教程-->
+<!--                                                   </button>-->
+<!--                                                   <a type="button" class="btn btn-primary btn-xs"-->
+<!--                                                      href="https://www.oracle.com/database/technologies/oracle-database-software-downloads.html"-->
+<!--                                                      target="_blank">-->
+<!--                                                      <i class="fa fa-download"> </i> 下载-->
+<!--                                                   </a>-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_details margin_bottom_30">-->
+<!--                                       <div class="contact_blog">-->
+<!--                                          &lt;!&ndash;                                          <h4 class="brief">Digital Strategist</h4>&ndash;&gt;-->
+<!--                                          <div class="contact_inner">-->
+<!--                                             <div class="left">-->
+<!--                                                <h3>SqlServer <br> 2019</h3>-->
+<!--                                                <p><strong>About: </strong>a free database service  by Microsoft</p>-->
+<!--                                                &lt;!&ndash;                                                <ul class="list-unstyled">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-envelope-o"></i> : test@gmail.com</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-phone"></i> : 987 654 3210</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </ul>&ndash;&gt;-->
+<!--                                             </div>-->
+<!--                                             <div class="right">-->
+<!--                                                <div class="profile_contacts">-->
+<!--                                                   <img class="img-responsive" src="images/layout_img/sqlserver.png" alt="#" />-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                             <div class="bottom_list">-->
+<!--                                                &lt;!&ndash;                                                <div class="left_rating">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <p class="ratings">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star-o"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   </p>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--                                                <div class="right_button">-->
+<!--                                                   <button type="button" class="btn btn-success btn-xs">-->
+<!--                                                      <i class="fa fa-search"></i> 安装教程-->
+<!--                                                   </button>-->
+<!--                                                   <a type="button" class="btn btn-primary btn-xs"-->
+<!--                                                      href="https://www.microsoft.com/zh-cn/sql-server/sql-server-downloads?rtc=3"-->
+<!--                                                      target="_blank">-->
+<!--                                                      <i class="fa fa-download"> </i> 下载-->
+<!--                                                   </a>-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_details margin_bottom_30">-->
+<!--                                       <div class="contact_blog">-->
+<!--                                          &lt;!&ndash;                                          <h4 class="brief">Digital Strategist</h4>&ndash;&gt;-->
+<!--                                          <div class="contact_inner">-->
+<!--                                             <div class="left">-->
+<!--                                                <h3>Ubuntu <br> 20.04.1 LTS</h3>-->
+<!--                                                <p><strong>About: </strong>one of the Linux releases</p>-->
+<!--                                                &lt;!&ndash;                                                <ul class="list-unstyled">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-envelope-o"></i> : test@gmail.com</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-phone"></i> : 987 654 3210</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </ul>&ndash;&gt;-->
+<!--                                             </div>-->
+<!--                                             <div class="right">-->
+<!--                                                <div class="profile_contacts">-->
+<!--                                                   <img class="img-responsive" src="images/layout_img/ubuntu.png" alt="#" />-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                             <div class="bottom_list">-->
+<!--                                                &lt;!&ndash;                                                <div class="left_rating">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <p class="ratings">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star-o"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   </p>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--                                                <div class="right_button">-->
+<!--                                                   <button type="button" class="btn btn-success btn-xs">-->
+<!--                                                      <i class="fa fa-search"></i> 安装教程-->
+<!--                                                   </button>-->
+<!--                                                   <a type="button" class="btn btn-primary btn-xs"-->
+<!--                                                      href="https://ubuntu.com/download/desktop"-->
+<!--                                                      target="_blank">-->
+<!--                                                      <i class="fa fa-download"> </i> 下载-->
+<!--                                                   </a>-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_details margin_bottom_30">-->
+<!--                                       <div class="contact_blog">-->
+<!--                                          &lt;!&ndash;                                          <h4 class="brief">Digital Strategist</h4>&ndash;&gt;-->
+<!--                                          <div class="contact_inner">-->
+<!--                                             <div class="left">-->
+<!--                                                <h3>CentOS Linux 8</h3>-->
+<!--                                                <p><strong>About: </strong>one of the Linux releases</p>-->
+<!--                                                &lt;!&ndash;                                                <ul class="list-unstyled">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-envelope-o"></i> : test@gmail.com</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-phone"></i> : 987 654 3210</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </ul>&ndash;&gt;-->
+<!--                                             </div>-->
+<!--                                             <div class="right">-->
+<!--                                                <div class="profile_contacts">-->
+<!--                                                   <img class="img-responsive" src="images/layout_img/centos.png" alt="#" />-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                             <div class="bottom_list">-->
+<!--                                                &lt;!&ndash;                                                <div class="left_rating">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <p class="ratings">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star-o"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   </p>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--                                                <div class="right_button">-->
+<!--                                                   <button type="button" class="btn btn-success btn-xs">-->
+<!--                                                      <i class="fa fa-search"></i> 安装教程-->
+<!--                                                   </button>-->
+<!--                                                   <a type="button" class="btn btn-primary btn-xs"-->
+<!--                                                      href="https://www.centos.org/download/"-->
+<!--                                                      target="_blank">-->
+<!--                                                      <i class="fa fa-download"> </i> 下载-->
+<!--                                                   </a>-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_details margin_bottom_30">-->
+<!--                                       <div class="contact_blog">-->
+<!--                                          &lt;!&ndash;                                          <h4 class="brief">Digital Strategist</h4>&ndash;&gt;-->
+<!--                                          <div class="contact_inner">-->
+<!--                                             <div class="left">-->
+<!--                                                <h3>Tomcat 9.0.41</h3>-->
+<!--                                                <p><strong>About: </strong> an open source  of the Java Servlet</p>-->
+<!--                                                &lt;!&ndash;                                                <ul class="list-unstyled">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-envelope-o"></i> : test@gmail.com</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-phone"></i> : 987 654 3210</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </ul>&ndash;&gt;-->
+<!--                                             </div>-->
+<!--                                             <div class="right">-->
+<!--                                                <div class="profile_contacts">-->
+<!--                                                   <img class="img-responsive" src="images/layout_img/tomcat.png" alt="#" />-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                             <div class="bottom_list">-->
+<!--                                                &lt;!&ndash;                                                <div class="left_rating">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <p class="ratings">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star-o"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   </p>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--                                                <div class="right_button">-->
+<!--                                                   <button type="button" class="btn btn-success btn-xs">-->
+<!--                                                      <i class="fa fa-search"></i> 安装教程-->
+<!--                                                   </button>-->
+<!--                                                   <a type="button" class="btn btn-primary btn-xs"-->
+<!--                                                      href="https://tomcat.apache.org/"-->
+<!--                                                      target="_blank">-->
+<!--                                                      <i class="fa fa-download"> </i> 下载-->
+<!--                                                   </a>-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 profile_details margin_bottom_30">-->
+<!--                                       <div class="contact_blog">-->
+<!--                                          &lt;!&ndash;                                          <h4 class="brief">Digital Strategist</h4>&ndash;&gt;-->
+<!--                                          <div class="contact_inner">-->
+<!--                                             <div class="left">-->
+<!--                                                <h3>IntelliJ IDEA</h3>-->
+<!--                                                <p><strong>About: </strong>the most popular IDE for Java</p>-->
+<!--                                                &lt;!&ndash;                                                <ul class="list-unstyled">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-envelope-o"></i> : test@gmail.com</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <li><i class="fa fa-phone"></i> : 987 654 3210</li>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </ul>&ndash;&gt;-->
+<!--                                             </div>-->
+<!--                                             <div class="right">-->
+<!--                                                <div class="profile_contacts">-->
+<!--                                                   <img class="img-responsive" src="images/layout_img/idea.png" alt="#" />-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                             <div class="bottom_list">-->
+<!--                                                &lt;!&ndash;                                                <div class="left_rating">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   <p class="ratings">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                      <a href="#"><span class="fa fa-star-o"></span></a>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                   </p>&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                </div>&ndash;&gt;-->
+<!--                                                <div class="right_button">-->
+<!--                                                   <button type="button" class="btn btn-success btn-xs">-->
+<!--                                                      <i class="fa fa-search"></i> 安装教程-->
+<!--                                                   </button>-->
+<!--                                                   <a type="button" class="btn btn-primary btn-xs"-->
+<!--                                                      href="https://www.jetbrains.com/idea/download/"-->
+<!--                                                      target="_blank">-->
+<!--                                                      <i class="fa fa-download"> </i> 下载-->
+<!--                                                   </a>-->
+<!--                                                </div>-->
+<!--                                             </div>-->
+<!--                                          </div>-->
+<!--                                       </div>-->
+<!--                                    </div>-->
+<!--                                    &lt;!&ndash; end column contact blog &ndash;&gt;-->
+<!--                                 </div>-->
+<!--                              </div>-->
+<!--                           </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; end row &ndash;&gt;-->
+<!--                     </div>-->
+                     <!-- footer -->
+<!--                     <div class="container-fluid">-->
+<!--                        <div class="row">-->
+<!--                           <div class="footer">-->
+<!--                              <p>Copyright &copy; 2020.Company name All rights reserved.<a target="_blank" href="https://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>-->
+<!--                           </div>-->
+<!--                        </div>-->
+<!--                     </div>-->
+<!--                  </div>-->
+                  <!-- end dashboard inner -->
+               </div>
+            </div>
+         </div>
+         </div>
+      </div>
+      <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/animate.js"></script>
+      <!-- select country -->
+      <script src="js/bootstrap-select.js"></script>
+      <!-- owl carousel -->
+      <script src="js/owl.carousel.js"></script> 
+      <!-- chart js -->
+      <script src="js/Chart.min.js"></script>
+      <script src="js/Chart.bundle.min.js"></script>
+      <script src="js/utils.js"></script>
+      <script src="js/analyser.js"></script>
+      <!-- nice scrollbar -->
+      <script src="js/perfect-scrollbar.min.js"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+      <!-- custom js -->
+      <script src="js/custom.js"></script>
+      <!-- calendar file css -->     
+      <script src="js/semantic.min.js"></script>
+      <script></script>
+      <!--sidebar-->
+
+   </body>
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <!--sidebar-->
+   <script>
+      $(function(){
+         $.ajax({
+            type:"get",
+            url:"/pages/sidebar.html",
+            async:true,
+            success:function(data){
+               $("#sidebar").html(data);
+            }
+         });
+      });
+
+   </script>
+   <!--topbar-->
+   <script>
+      $(function(){
+         $.ajax({
+            type:"get",
+            url:"/pages/topbar.html",
+            async:true,
+            success:function(data){
+               $("#topbar").html(data);
+            }
+         });
+      });
+
+   </script>
+</html>
