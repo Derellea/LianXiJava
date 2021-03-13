@@ -15,10 +15,10 @@
     Object error = request.getAttribute("error_info");
 %>
 </body>
-<script >
+<script>
     var error = '<%=error%>'
     if(confirm(error)){
         location.href="/login.html";
     }
-</script >
+</script>
 </html>

@@ -15,7 +15,7 @@
     <div class="full">
         <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
         <div class="logo_section">
-            <a href="index.html"><img class="img-responsive" src="images/logo/logo.png" alt="#" /></a>
+            <a href="index.html"><img class="img-responsive" src="${pageContext.request.contextPath}/images/logo/logo.png" alt="#" /></a>
         </div>
         <div class="right_topbar">
             <div class="icon_info">
@@ -27,7 +27,7 @@
                 </ul>
                 <ul class="user_profile_dd">
                     <li>
-                        <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="images/layout_img/user_img.jpg" alt="#" /><span class="name_user">John David</span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="${pageContext.request.contextPath}/images/layout_img/user_img.jpg" alt="#" /><span class="name_user">John David</span></a>
                         <div class="dropdown-menu">
                             <!--                                       <a class="dropdown-item" href="profile.html">My Profile</a>-->
                             <!--                                       <a class="dropdown-item" href="settings.html">Settings</a>-->
@@ -43,15 +43,15 @@
 
 
 <!-- custom js -->
-<script src="js/custom.js"></script>
-<script src="js/chart_custom_style.js"></script>
+<script src="${pageContext.request.contextPath}/js/custom.js"></script>
+<script src="${pageContext.request.contextPath}/js/chart_custom_style.js"></script>
 
-<script src="/jQuery/jquery-2.2.3.min.js"></script>
+<script src="${pageContext.request.contextPath}//jQuery/jquery-2.2.3.min.js"></script>
 <script></script>
 
 <script>
     function logOut(){
-        location.href="/user/logOut";
+        location.href="${pageContext.request.contextPath}/user/logOut";
     }
 </script>
 <script type="text/javascript">

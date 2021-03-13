@@ -41,9 +41,9 @@ public class MyThread {
                     count = messageService.countNoreadByAcceptId(id);
                     while (stopMe) {
                         new_count = messageService.countNoreadByAcceptId(id);
-                        System.out.println("count:"+count+"-------new_count:"+new_count );
+
                         if (count != new_count) {
-                            System.out.println("change");
+
                             count = new_count;
                             wbs.sendMessageTo(Integer.toString(count), id);
                         }
