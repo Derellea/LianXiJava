@@ -16,9 +16,9 @@
     <div class="sidebar_user_info">
         <div class="icon_setting"></div>
         <div class="user_profle_side">
-            <div class="user_img"><img class="img-responsive" src="${pageContext.request.contextPath}/images/layout_img/user_img.jpg" alt="#" /></div>
+            <div class="user_img" id="uImage"></div>
             <div class="user_info">
-                <h6>John David</h6>
+                <h6 id="username"></h6>
                 <p><span class="online_animation"></span> Online</p>
             </div>
         </div>
@@ -32,8 +32,25 @@
 </div>
 
 </body>
-<script src="${pageContext.request.contextPath}//jQuery/jquery-2.2.3.min.js"/>
+<script src="${pageContext.request.contextPath}/jQuery/jquery-2.2.3.min.js"/>
 <script></script>
+
+<script>
+    $.getJSON("/user/info", function (user) {
+
+        $("#username").text(user.username);
+
+        var uImage='';
+        if(user.uImage==null){
+            uImage='<img class="img-responsive" src="${pageContext.request.contextPath}/images/layout_img/user_img.jpg" alt="#" />';
+        }else{
+            uImage='<img class="img-responsive" src="'+'/images/head/'+user.uImage+'" alt="#" />';
+        }
+        $("#uImage").html(uImage);
+
+    });
+</script>
+
 <script>
     var vcStr='<ul class="collapse list-unstyled" id="element">';
     $.post("/vediocategory",{},function (list) {
@@ -57,4 +74,5 @@
         $("#list").html(str);
     },"json")
 </script>
+
 </html>

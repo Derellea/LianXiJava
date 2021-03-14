@@ -2,14 +2,45 @@ package com.derellea.domain;
 
 import javax.persistence.Column;
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 public class Message implements Serializable {
+    @Column(name ="mId")
+    private int mId;
     @Column(name = "sendId")
     private int sendId;
     @Column(name = "acceptId")
     private int acceptId;
-    @Column(name = "ifread")
+    @Column(name = "ifRead")
     private boolean ifread;
+    @Column(name = "mDesc")
+    private String mDesc;
+    @Column(name="mTime")
+    private Timestamp mTime;
+
+    public int getmId() {
+        return mId;
+    }
+
+    public void setmId(int mId) {
+        this.mId = mId;
+    }
+
+    public String getmDesc() {
+        return mDesc;
+    }
+
+    public void setmDesc(String mDesc) {
+        this.mDesc = mDesc;
+    }
+
+    public Timestamp getmTime() {
+        return mTime;
+    }
+
+    public void setmTime(Timestamp mTime) {
+        this.mTime = mTime;
+    }
 
     public int getSendId() {
         return sendId;
@@ -38,9 +69,12 @@ public class Message implements Serializable {
     @Override
     public String toString() {
         return "Message{" +
-                "sendId=" + sendId +
+                "mId=" + mId +
+                ", sendId=" + sendId +
                 ", acceptId=" + acceptId +
                 ", ifread=" + ifread +
+                ", mDesc='" + mDesc + '\'' +
+                ", mTime=" + mTime +
                 '}';
     }
 }

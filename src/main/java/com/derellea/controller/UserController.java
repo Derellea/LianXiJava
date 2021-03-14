@@ -31,6 +31,13 @@ public class UserController {
     @RequestMapping("/logOut")
     public String logOut(HttpServletRequest req){
         req.getSession().removeAttribute("user");
-        return "/login.html";
+        String contextPath = req.getContextPath();
+        return "redirect:"+contextPath+"/index.jsp";
+    }
+
+    @RequestMapping("/info")
+    @ResponseBody
+    public User info(HttpServletRequest req){
+        return ((User) req.getSession().getAttribute("user"));
     }
 }

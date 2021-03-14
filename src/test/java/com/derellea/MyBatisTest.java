@@ -64,6 +64,11 @@ public class MyBatisTest {
     }
 
     @Test
+    public void messageTest2(){
+        System.out.println(messageService.findAll());
+    }
+
+    @Test
     public void vedioTest2(){
         System.out.println(vedioService.findByvcId(4));
     }

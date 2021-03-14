@@ -27,7 +27,7 @@
                 </ul>
                 <ul class="user_profile_dd">
                     <li>
-                        <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="${pageContext.request.contextPath}/images/layout_img/user_img.jpg" alt="#" /><span class="name_user">John David</span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" id="user"></a>
                         <div class="dropdown-menu">
                             <!--                                       <a class="dropdown-item" href="profile.html">My Profile</a>-->
                             <!--                                       <a class="dropdown-item" href="settings.html">Settings</a>-->
@@ -48,6 +48,24 @@
 
 <script src="${pageContext.request.contextPath}//jQuery/jquery-2.2.3.min.js"></script>
 <script></script>
+
+<!--加载头像和用户名-->
+<script>
+    $.getJSON("/user/info", function (user) {
+
+        var uImage='';
+        if(user.uImage==null){
+            uImage='<img class="img-responsive" src="${pageContext.request.contextPath}/images/layout_img/user_img.jpg" alt="#" />';
+        }else{
+            uImage='<img class="img-responsive" src="'+'/images/head/'+user.uImage+'" alt="#" />';
+        }
+
+        var html =uImage+'<span class="name_user">'+user.username+'</span>';
+
+        $("#user").html(html);
+
+    });
+</script>
 
 <script>
     function logOut(){

@@ -18,7 +18,7 @@
 <script>
     var error = '<%=error%>'
     if(confirm(error)){
-        location.href="/login.html";
+        location.href="/index.jsp";
     }
 </script>
 </html>
