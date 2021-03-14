@@ -10,4 +10,6 @@ public interface MessageService {
     public int countNoreadByAcceptId(int acceptId);
 
     public List<Message> findAll();
+
+    public List<Message> findBySendIdAndAcceptId(int sendId,int acceptId);
 }

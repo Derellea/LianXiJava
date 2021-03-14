@@ -13,4 +13,8 @@ import javax.persistence.Table;
 public interface UserMapper extends Mapper<User> {
     @Select("select * from user where username = #{user.username} and password = #{user.password}")
     public User findByUsernameAndPassword(@Param("user")User user);
+
+    @Select("select * from user where id = #{id}")
+    public User findById(int id);
+
 }

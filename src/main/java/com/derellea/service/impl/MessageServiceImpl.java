@@ -21,4 +21,11 @@ public class MessageServiceImpl implements MessageService {
     public List<Message> findAll() {
         return messageMapper.selectAll();
     }
+
+    @Override
+    public List<Message> findBySendIdAndAcceptId(int sendId, int acceptId) {
+        return messageMapper.findBySendIdAndAcceptId(sendId,acceptId);
+    }
+
+
 }

@@ -2,6 +2,7 @@ package com.derellea;
 
 import com.derellea.domain.User;
 import com.derellea.domain.Vedio;
+import com.derellea.mapper.MessageMapper;
 import com.derellea.mapper.UserMapper;
 import com.derellea.service.CategoryService;
 import com.derellea.service.MessageService;
@@ -28,6 +29,11 @@ public class MyBatisTest {
     MessageService messageService;
     @Autowired
     VedioService vedioService;
+    @Autowired
+    UserMapper userMapper;
+    @Autowired
+    MessageMapper messageMapper;
+
     @Test
     public void userTest(){
         System.out.println(userService.findAll());
@@ -40,6 +46,8 @@ public class MyBatisTest {
         user.setPassword("admin123");
         System.out.println(userService.findByUsernameAndPassword(user));
     }
+
+
 
     @Test
     public void categoryTest(){
@@ -66,6 +74,18 @@ public class MyBatisTest {
     @Test
     public void messageTest2(){
         System.out.println(messageService.findAll());
+    }
+
+    @Test
+    public void messageTest3(){
+        System.out.println(messageService.findBySendIdAndAcceptId(1,2));
+    }
+
+
+    @Test
+    public void messageTest4(){
+
+        System.out.println(messageMapper.findBySendIdAndAcceptId(1, 2));
     }
 
     @Test

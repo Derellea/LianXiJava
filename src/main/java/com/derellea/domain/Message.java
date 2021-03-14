@@ -5,18 +5,20 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 public class Message implements Serializable {
-    @Column(name ="mId")
+
     private int mId;
-    @Column(name = "sendId")
-    private int sendId;
-    @Column(name = "acceptId")
-    private int acceptId;
-    @Column(name = "ifRead")
+
+    private User send;
+
+    private User accept;
+
+
     private boolean ifread;
-    @Column(name = "mDesc")
+
     private String mDesc;
-    @Column(name="mTime")
+
     private Timestamp mTime;
+
 
     public int getmId() {
         return mId;
@@ -24,6 +26,30 @@ public class Message implements Serializable {
 
     public void setmId(int mId) {
         this.mId = mId;
+    }
+
+    public User getSend() {
+        return send;
+    }
+
+    public void setSend(User send) {
+        this.send = send;
+    }
+
+    public User getAccept() {
+        return accept;
+    }
+
+    public void setAccept(User accept) {
+        this.accept = accept;
+    }
+
+    public boolean isIfread() {
+        return ifread;
+    }
+
+    public void setIfread(boolean ifread) {
+        this.ifread = ifread;
     }
 
     public String getmDesc() {
@@ -42,36 +68,12 @@ public class Message implements Serializable {
         this.mTime = mTime;
     }
 
-    public int getSendId() {
-        return sendId;
-    }
-
-    public void setSendId(int sendId) {
-        this.sendId = sendId;
-    }
-
-    public int getAcceptId() {
-        return acceptId;
-    }
-
-    public void setAcceptId(int acceptId) {
-        this.acceptId = acceptId;
-    }
-
-    public boolean isIfread() {
-        return ifread;
-    }
-
-    public void setIfread(boolean ifread) {
-        this.ifread = ifread;
-    }
-
     @Override
     public String toString() {
         return "Message{" +
                 "mId=" + mId +
-                ", sendId=" + sendId +
-                ", acceptId=" + acceptId +
+                ", sendId=" + send +
+                ", acceptId=" + accept +
                 ", ifread=" + ifread +
                 ", mDesc='" + mDesc + '\'' +
                 ", mTime=" + mTime +

@@ -58,8 +58,7 @@ public class WebSocket {
         }
 
         public void sendMessageTo(String message, int To) throws IOException {
-                // session.getBasicRemote().sendText(message);
-                //session.getAsyncRemote().sendText(message);
+
                 for (WebSocket item : clients.values()) {
                         if (item.id==To)
                                 item.session.getAsyncRemote().sendText(message);

@@ -24,7 +24,7 @@
     var url=window.location.host;
     if('WebSocket' in window){
 
-        webSocket=new WebSocket("ws://"+url+"/webSocket/"+${user.id});
+        webSocket=new WebSocket("ws://"+url+"/chat/"+"1-2");
     }else{
         alert('当前浏览器 Not support websocket');
     }
