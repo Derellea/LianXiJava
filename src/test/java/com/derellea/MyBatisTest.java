@@ -1,5 +1,6 @@
 package com.derellea;
 
+import com.derellea.domain.Message;
 import com.derellea.domain.User;
 import com.derellea.domain.Vedio;
 import com.derellea.mapper.MessageMapper;
@@ -8,6 +9,8 @@ import com.derellea.service.CategoryService;
 import com.derellea.service.MessageService;
 import com.derellea.service.UserService;
 import com.derellea.service.VedioService;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +18,12 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.File;
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext.xml")
@@ -88,9 +95,41 @@ public class MyBatisTest {
         System.out.println(messageMapper.findBySendIdAndAcceptId(1, 2));
     }
 
+
+
+    @Test
+    public void messageTest5(){
+        Message message=new Message();
+        message.setIfread(true);
+        message.setmDesc("试试");
+        User send = new User();
+        send.setId(11);
+        User accept = new User();
+        accept.setId(12);
+        message.setAccept(accept);
+        message.setSend(send);
+        message.setmTime(new Date().getTime());
+
+        //messageMapper.insertBySendIdAndAcceptId(message);
+
+
+    }
+
     @Test
     public void vedioTest2(){
         System.out.println(vedioService.findByvcId(4));
+    }
+
+
+    @Test
+    public void jacksonTest() throws IOException {
+        String data="         {   \"sendId\" : \" 1\" ,\n" +
+                "            \"acceptId\": \" 2\" ,\n" +
+                "            \"ifRead\": \" 1\" ,\n" +
+                "            \"mDesc\":\" 2\" ,\n" +
+                "            \"mTime\": \" 1\"  }";
+        Map<String,String> result = new ObjectMapper().readValue(data, new TypeReference<Map<String,String>>() { });
+        System.out.println(result.get("sendId"));
     }
 
 

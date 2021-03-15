@@ -3,16 +3,15 @@ package com.derellea.socket;
 
 import com.derellea.domain.Message;
 import com.derellea.service.MessageService;
+import com.derellea.thread.ChatThread;
 import com.derellea.thread.MyThread;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mysql.cj.xdevapi.JsonArray;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import javax.websocket.OnClose;
-import javax.websocket.OnError;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
+import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
@@ -26,7 +25,7 @@ public class chatSocket {
     private int acceptId;
     private Session session;
     private static Map<Integer, chatSocket> clients = new ConcurrentHashMap<Integer, chatSocket>();
-    MyThread thread=new MyThread();
+    ChatThread thread=new ChatThread();
     MessageService messageService;
     //聊天记录存储
     private List<Message>messages;
@@ -51,7 +50,28 @@ public class chatSocket {
         //打开的时候
         sendMessageToSend(messages, sendId);
 
+        //开启线程
+        thread.sendMessage(sendId,acceptId);
+
     }
+
+
+    @OnMessage
+    public void onMessage(String data){
+        try {
+            Map<String,String> result = new ObjectMapper().readValue(data, new TypeReference<Map<String,String>>() { });
+            int sendId = Integer.parseInt(result.get("sendId"));
+            int acceptId = Integer.parseInt(result.get("acceptId"));
+            boolean ifRead = (result.get("ifRead")).equals("1")? true:false;
+            String mDesc = result.get("mDesc");
+            long mTime = Long.parseLong(result.get("mTime"));
+            messageService.insert(sendId,acceptId,ifRead,mDesc,mTime);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @OnClose
     public void onClose() {
@@ -69,6 +89,15 @@ public class chatSocket {
 
         for (chatSocket item : clients.values()) {
             if (item.sendId== sendId) {
+                item.session.getAsyncRemote().sendText(new ObjectMapper().writeValueAsString(messages));
+            }
+        }
+    }
+
+    public void sendMessageToAccept(List<Message> messages, int acceptId) throws IOException {
+
+        for (chatSocket item : clients.values()) {
+            if (item.acceptId== acceptId) {
                 item.session.getAsyncRemote().sendText(new ObjectMapper().writeValueAsString(messages));
             }
         }

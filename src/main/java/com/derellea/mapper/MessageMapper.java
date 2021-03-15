@@ -47,4 +47,11 @@ public interface MessageMapper {
         public List<Message> selectAll();
 
 
+        @Insert(
+                "insert into message(sendId,acceptId,ifRead,mDesc,mTime) " +
+                        "values(#{sendId},#{acceptId},#{ifRead},#{mDesc},#{mTime})"
+        )
+        public void insert(@Param("sendId")int sendId,@Param("acceptId")int acceptId,@Param("ifRead")boolean ifRead,@Param("mDesc")String mDesc,@Param("mTime")long mTime);
+
+
 }

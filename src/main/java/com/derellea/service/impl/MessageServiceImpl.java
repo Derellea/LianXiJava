@@ -27,5 +27,10 @@ public class MessageServiceImpl implements MessageService {
         return messageMapper.findBySendIdAndAcceptId(sendId,acceptId);
     }
 
+    @Override
+    public void insert(int sendId, int acceptId, boolean ifRead, String mDesc, long mTime) {
+        messageMapper.insert(sendId,acceptId,ifRead,mDesc,mTime);
+    }
+
 
 }

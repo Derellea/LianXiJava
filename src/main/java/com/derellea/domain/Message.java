@@ -17,7 +17,7 @@ public class Message implements Serializable {
 
     private String mDesc;
 
-    private Timestamp mTime;
+    private long mTime;
 
 
     public int getmId() {
@@ -60,11 +60,11 @@ public class Message implements Serializable {
         this.mDesc = mDesc;
     }
 
-    public Timestamp getmTime() {
+    public long getmTime() {
         return mTime;
     }
 
-    public void setmTime(Timestamp mTime) {
+    public void setmTime(long mTime) {
         this.mTime = mTime;
     }
 

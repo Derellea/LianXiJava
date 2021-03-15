@@ -69,6 +69,7 @@
     }
 
     webSocket.onmessage = function (event) {
+        $("#chat").html("");
         $(JSON.parse(event.data)).each(function (index,message) {
             showChat(message);
         })
@@ -103,7 +104,7 @@
         var to = message.accept.id;   //获取接收人的id
 
         //var isSef = '${user.id}' == to ? "am-comment-flip" : "";   //如果是自己则显示在右边,他人信息显示在左边
-        var isSef = '1' == to ? "am-comment-flip" : "";   //如果是自己则显示在右边,他人信息显示在左边
+        var isSef = '1' == to ?   "" : "am-comment-flip";   //如果是自己则显示在右边,他人信息显示在左边
 
         var sendHead="/images/head/" + message.send.uImage;
         var acceptHead="/images/head/" + message.accept.uImage;
@@ -118,6 +119,26 @@
         chat.scrollTop(chat[0].scrollHeight);   //让聊天区始终滚动到最下面
 
 
+    }
+
+    /**
+     * 发送信息给后台
+     */
+    function sendMessage(){
+        var message = $("#message").val();
+
+        if(message == null || message == ""){
+            layer.msg("请不要惜字如金!", { offset: 0, shift: 6 });
+            return;
+        }
+
+        webSocket.send(JSON.stringify({
+            sendId : '${user.id}',
+            acceptId: '2',
+            ifRead: '1',
+            mDesc:message,
+            mTime: new Date().getTime()
+        }));
     }
 
 </script>
