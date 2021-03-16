@@ -40,7 +40,7 @@
         <!-- 列表区 -->
         <div class="am-panel am-panel-default" style="float:right;width: 20%;">
             <div class="am-panel-hd">
-                <h3 class="am-panel-title">在线列表 [<span id="onlinenum"></span>]</h3>
+                <h3 class="am-panel-title">列表 <span id="onlinenum"></span></h3>
             </div>
             <ul class="am-list am-list-static am-list-striped" id="list">
             </ul>

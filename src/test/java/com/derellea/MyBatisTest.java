@@ -5,10 +5,7 @@ import com.derellea.domain.User;
 import com.derellea.domain.Vedio;
 import com.derellea.mapper.MessageMapper;
 import com.derellea.mapper.UserMapper;
-import com.derellea.service.CategoryService;
-import com.derellea.service.MessageService;
-import com.derellea.service.UserService;
-import com.derellea.service.VedioService;
+import com.derellea.service.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -20,6 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -40,6 +38,8 @@ public class MyBatisTest {
     UserMapper userMapper;
     @Autowired
     MessageMapper messageMapper;
+    @Autowired
+    questionService questionService;
 
     @Test
     public void userTest(){
@@ -154,5 +154,27 @@ public class MyBatisTest {
         }
         return list;
     }
+
+
+    @Test
+    public void questionTest(){
+        long qDate = new Date("2021/2/12 15:12").getTime();
+        Date date=new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        date.setTime(qDate);
+        System.out.println(dateFormat.format(date));
+
+    }
+
+    //用作插入
+    @Test
+    public void questionTest2(){
+        long qDate = new Date("2021/2/12 15:12").getTime();
+        String qTitle="为什么Java中Scanner无法使用，一直报错？";
+        String qDesc="";
+        questionService.qInsert(2,qDate,qTitle,qDesc);
+
+    }
+
 
 }
